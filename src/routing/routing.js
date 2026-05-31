@@ -28,7 +28,7 @@ app.get("/about", (req, res) => {
 //  Nota: Ambas ejemplos realizan lo mismo.
 
 // Ejemplo 1:
-// app.get("*", (req, res) => res.status(404).send("Error 404, Page Not found"));
+// app.get("/*path", (req, res) => res.status(404).send("Error 404, Page Not found"));
 
 // Ejemplo 2:
 app.use((req, res) => {

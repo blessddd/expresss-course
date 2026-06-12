@@ -1,0 +1,40 @@
+<%- include("./partials/start") %>
+
+<header>
+  <h1>Express + EJS</h1>
+  <nav>
+    <ul>
+      <li><a href="/about">Sobre mí</a></li>
+      <li><a href="/posts">Posts + Fetch</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <header>
+    <h2>Mi primer servidor en Express</h2>
+  </header>
+  <p>
+    Hola a todos, estoy probando EJS para poder hacer Server Side Rendering con
+    Express :D
+  </p>
+  <article>
+    <header>
+      <h3>Datos desde el servidor: <%= title %></h3>
+    </header>
+    <ul>
+      <% users.forEach(({ username, name }) => { %>
+        <li>
+          <b>Nombre:</b> <%= name %> <br/>
+          <b>Usuario:</b> <%= username %>  
+        </li>
+
+        <br/>
+      <% }); %>
+    </ul>
+  </article>
+</main>
+<footer>
+  <h4>Copyrigth 2026 &copy; - blesssddd - Todos los derechos reservados</h4>
+</footer>
+
+<%- include("./partials/end") %>

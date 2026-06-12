@@ -1,0 +1,34 @@
+<%- include("./partials/start") %>
+
+<header>
+  <h1>Sobre mí</h1>
+  <nav>
+    <ul>
+      <li><a href="/home">Inicio</a></li>
+      <li><a href="/posts">Posts + Fetch</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <header>
+    <h2>blessddd</h2>
+  </header>
+  <p>
+    Hola a todos, me llamo Kevin Alvarez, estoy aprendiendo a usar Express para hacer aplicaciones más pro con backend, para poder expandir y mejorar mis habilidades como desarrollador full stack  
+  </p>
+  <article>
+    <header>
+      <h3>Datos de <%= data.name %></h3>
+    </header>
+    <ul>
+      <% data.forEach(({ label, text }) => { %>
+        <li><b><%= label %></b>: <%= text %></li>
+      <% }) %>
+    </ul>
+  </article>
+</main>
+<footer>
+  <h4>Copyrigth 2026 &copy; - blesssddd - Todos los derechos reservados</h4>
+</footer>
+
+<%- include("./partials/end") %>

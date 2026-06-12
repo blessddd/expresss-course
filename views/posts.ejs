@@ -1,0 +1,35 @@
+<%- include("./partials/start") %>
+
+<header>
+  <h1>Post + Fetch</h1>
+  <nav>
+    <ul>
+      <li><a href="/home">Inicio</a></li>
+      <li><a href="/about">Sobre mí</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <header>
+    <h2>Mi primer fetch a un servidor externo</h2>
+  </header>
+  <article>
+    <header>
+      <h3>Datos desde el servidor: <%= title %></h3>
+    </header>
+    
+    <% data.forEach(({ title, body }) => { %>
+      <article>
+        <header>
+          <h3>Titulo: <%= title %></h3>
+        </header>
+        <p><b>Contenido del post:</b> <%= body %></p>
+      </article>
+    <% }); %>
+  </article>
+</main>
+<footer>
+  <h4>Copyrigth 2026 &copy; - blesssddd - Todos los derechos reservados</h4>
+</footer>
+
+<%- include("./partials/end") %>
